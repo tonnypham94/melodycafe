@@ -1,0 +1,19 @@
+.landing-page {
+  .container {
+    padding: 0 20px;
+    max-width: 1200px;
+    margin: auto;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  body {
+    font-size: 14px;
+  }
+
+  .landing-page {
+    .container {
+      padding: 0 1rem;
+    }
+  }
+}

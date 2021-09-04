@@ -1,0 +1,47 @@
+@import "~animate.css/animate.css";
+@import './assets/style/variable.scss';
+
+@font-face {
+  font-family: 'Geraldine';
+  src: local('Geraldine'), url(./assets/fonts/GeraldinePersonalUseItalic.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: 'Countryside';
+  src: local('Countryside'), url(./assets/fonts/Countryside.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: 'BeautyMountains';
+  src: local('BeautyMountains'), url(./assets/fonts/BeautyMountainsPersonalUse.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: 'Brightons';
+  src: local('Brightons'), url(./assets/fonts/Brightons.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: 'Allison';
+  src: local('Allison'), url(./assets/fonts/Allison-Regular.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: 'DancingScript';
+  src: local('DancingScript'), url(./assets/fonts/DancingScript-VariableFont_wght.ttf) format('truetype');
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-size: 16px;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
