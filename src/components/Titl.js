@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from 'react'
+import React, { useRef } from 'react'
 import classNames from 'classnames'
 import VanillaTilt from 'vanilla-tilt'
 import './Tilt.scss'
@@ -15,9 +15,7 @@ function Tilt(props) {
     }
   }
 
-  useEffect(() => {
-    initVanillaTilt()
-  }, [])
+  initVanillaTilt()
 
   return <div ref={tilt} {...rest} className={titlClassNames} />
 }

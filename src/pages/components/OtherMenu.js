@@ -1,7 +1,6 @@
-import React, { useEffect, useState } from 'react'
+import React from 'react'
 import Slider from "react-slick"
 import Tilt from '../../components/Titl'
-import ScrollAnimation from 'react-animate-on-scroll'
 import Image from '../../assets/images'
 import './OtherMenu.scss'
 
