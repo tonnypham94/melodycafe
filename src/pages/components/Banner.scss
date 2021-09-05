@@ -1,26 +1,24 @@
-.react-parallax-background {
-  img {
-    height: 100vh;
-  }
-}
+@import '../../assets/style/variable.scss';
 
 .banner {
-  .react-parallax-background-children {
-    width: 100%;
-
-    .react-parallax-background{
-      width: 100%;
-
-      img {
-        width: 100%;
-        object-fit: cover;
-      }
-    }
-  }
-
-  .react-parallax-content {
+  .react-parallax {
     height: 100vh;
+    height: calc(var(--vh, 1vh) * 100);
     text-align: center;
+    overflow: hidden;
+    position: relative;
+
+    .react-parallax-image{
+      width: 100%;
+      background-attachment: fixed;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      // position: fixed;
+      z-index: -1;
+      height: 100vh;
+      height: calc(var(--vh, 1vh) * 100);
+    }
   
     .melody-title {
       position: absolute;
@@ -30,20 +28,25 @@
       background: rgba(93, 53, 45, 0.6);
       width: 100%;
       height: 100vh;
-      color: #fff;
+      height: calc(var(--vh, 1vh) * 100);
+      color: $white;
       display: flex;
       justify-content: center;
       align-items: center;
       font-size: 6rem;
+
+      .page {
+        margin-top: -10%;
+      }
     }
   }
 
   .high-quality {
     font-family: Countryside, Arial, serif;
     font-size: 3rem;
-    color: #ffd62e;
-    border-bottom: 1px solid #ffd62e;
-    border-top: 1px solid #ffd62e;
+    color: $gold;
+    border-bottom: 1px solid $gold;
+    border-top: 1px solid $gold;
     letter-spacing: 0.5rem;
   }
 

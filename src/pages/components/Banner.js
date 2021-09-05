@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react'
 import classNames from 'classnames'
-import { Parallax, Background } from 'react-parallax'
 import Image from '../../assets/images'
 import './Banner.scss'
 
@@ -15,16 +14,21 @@ function Banner({ loadingPage }) {
     'active': isRandomTitle,
   })
 
+  const setHeightBanner = () => {
+    // Fixing the jumping height of banner on the phone
+    let vh = window.innerHeight * 0.01
+    document.documentElement.style.setProperty('--vh', `${vh}px`)
+  }
+
   useEffect(() => {
+    setHeightBanner()
     !loadingPage && setIsRandomTitle(true)
   }, [loadingPage])
 
   return (
     <div className="banner">
-      <Parallax strength={500}>
-        <Background className="custom-bg">
-          <img src={Image.slider1} alt="loading-page" />
-        </Background>
+      <div className="react-parallax">
+        <div className="react-parallax-image" style={{ backgroundImage: `url(${Image.slider1})`}}></div>
         <div className="melody-title">
           <div className="page">
             <ul className={RandomTitle}>
@@ -47,40 +51,7 @@ function Banner({ loadingPage }) {
             <div className="organic"><span>100</span>% Organic</div>
           </div>
         </div>
-      </Parallax>
-      {/* <ParallaxBanner
-        className="parallax"
-        layers={[
-          {
-            image: Image.slider1,
-            amount: 0.7,
-            expanded: false
-          }
-        ]}
-        style={{
-          height: "100vh",
-        }}
-      >
-        <div className="melody-title">
-          <div className="page">
-            <ul className={RandomTitle}>
-              <li>M</li>
-              <li>E</li>
-              <li>L</li>
-              <li>O</li>
-              <li>D</li>
-              <li>Y</li>
-              <li> </li>
-              <li>C</li>
-              <li>O</li>
-              <li>F</li>
-              <li>F</li>
-              <li>E</li>
-              <li>E</li>
-            </ul>
-          </div>
-        </div>
-      </ParallaxBanner> */}
+      </div>
     </div>
   )
 }

@@ -20,7 +20,9 @@
     "react-parallax": "^3.3.0",
     "react-scripts": "^4.0.3",
     "react-slick": "^0.28.1",
+    "react-vanilla-tilt": "^1.0.0",
     "slick-carousel": "^1.8.1",
+    "vanilla-tilt": "^1.7.2",
     "web-vitals": "^1.0.1"
   },
   "scripts": {

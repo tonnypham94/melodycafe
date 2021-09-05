@@ -1,20 +1,110 @@
+@import '../../assets/style/variable.scss';
+
 .other-item {
   margin-top: 80px;
   width: 100%;
   overflow: hidden;
-}
 
-.wrap-item {
-  padding: 1rem;
-  box-sizing: border-box;
-}
-
-.item-menu {
-  border-radius: 8px;
-  overflow: hidden;
-  box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
-
-  img {
+  .other-item-background {
     width: 100%;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    // position: fixed;
+  }
+
+  .wrap-content {
+    background-color: rgba(93, 53, 45, 0.6);
+    padding: 4rem 4rem 6rem 4rem;
+  
+    .slick-list {
+      padding-top: 30px;
+    }
+  }
+
+  .other-menu {
+    padding: 1rem;
+    font-family: Geraldine, Arial, serif;
+    font-size: 5rem;
+    padding-bottom: 2rem;
+    text-align: center;
+    color: $white;
+  }
+  
+  .wrap-item {
+    padding: 1rem;
+    box-sizing: border-box;
+  }
+  
+  .item-menu {
+    font-family: Geraldine, Arial, serif;
+    border-radius: 8px;
+    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+    background: $white;
+    height: 450px;
+  
+    img {
+      margin: auto;
+      margin-top: 2rem;
+      transform: translate3d(0, -50px, 55px);
+      border: 2px solid $space;
+      border-radius: 8px;
+      width: 87%;
+      height: 400px;
+      object-fit: cover;
+    }
+  
+    .title {
+      font-family: Italianno, AlexBrush, Arial, serif;
+      font-size: 2rem;
+      height: 50px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 1rem;
+      box-sizing: border-box;
+      background-color: $space;
+      color: $white;
+      transform: translate3d(0, -40px, 30px);
+      border-radius: 8px;
+    }
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .other-item {
+    .wrap-content {
+      background-color: rgba(93, 53, 45, 0.6);
+      padding: 3rem 1rem 4rem 1rem;
+    
+      .slick-list {
+        padding-top: 30px;
+      }
+
+      .slick-next {
+        right: -12px;
+      }
+
+      .slick-prev {
+        left: -12px;
+      }
+    }
+
+    .other-menu {
+      font-size: 3rem;
+    }
+
+    .item-menu {
+      height: 410px;
+  
+      img {
+        height: 370px;
+      }
+  
+      .title {
+        margin-top: 8px;
+      }
+    }
   }
 }
