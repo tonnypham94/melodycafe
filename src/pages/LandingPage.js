@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
-import LoadingPage from './components/LoadingPage'
+// import LoadingPage from './components/LoadingPage'
 import Banner from './components/Banner'
-import Footer from './components/Footer'
+// import Footer from './components/Footer'
 import MainItem from './components/MainItem'
 import OtherMenu from './components/OtherMenu'
 import OurBlog from './components/OurBlog'
@@ -9,19 +9,10 @@ import 'animate.css'
 import './LandingPage.scss'
 
 function LandingPage() {
-  let start = window.performance.now()
   const [loadingPage, setLoadingPage] = useState(true)
 
-  const demoAsyncCall = () => {
-    return new Promise((resolve) => setTimeout(() => resolve(), 3000))
-  }
-
   useEffect(() => {
-    demoAsyncCall().then(() => {
-      setLoadingPage(false)
-      let end2 = window.performance.now()
-      console.log(`Execution time to rendered: ${end2 - start} ms`)
-    })
+    setLoadingPage(false)
   }, [])
 
   return (

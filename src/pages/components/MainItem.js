@@ -15,7 +15,7 @@ function MainItem() {
         <div className="item">
           <ScrollAnimation animateIn="animate__fadeInUp" animateOnce={true}>
             <div className="image">
-              <video id="video-new-cafe" autoplay muted src={Image.newcafe} loop type="video/mp4"/>
+              <video id="video-new-cafe" autoPlay muted src={Image.newcafe} loop type="video/mp4"/>
             </div>
           </ScrollAnimation>
           <ScrollAnimation animateIn="animate__fadeInDown" animateOnce={true}>

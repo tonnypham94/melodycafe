@@ -55,3 +55,12 @@
     }
   }
 }
+
+@media only screen and (max-width: 767px) {
+  .our-blog {
+    .our-blog-title {
+      font-size: 3rem;
+      margin-top: 20px;
+    }
+  }
+}
