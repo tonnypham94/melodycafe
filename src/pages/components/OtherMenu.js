@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
-import Slider from "react-slick";
-import classNames from 'classnames'
+import Slider from "react-slick"
+import Tilt from '../../components/Titl'
+import ScrollAnimation from 'react-animate-on-scroll'
 import Image from '../../assets/images'
 import './OtherMenu.scss'
 
@@ -38,58 +39,62 @@ function OtherMenu() {
     ]
   }
 
+  const allItems = [
+    {
+      name: 'Sinh tố cam',
+      image: Image.cam1
+    },
+    {
+      name: 'Sinh tố dâu',
+      image: Image.dau1
+    },
+    {
+      name: 'Sinh tố dứa',
+      image: Image.dua
+    },
+    {
+      name: 'Sinh tố cam cà rốt',
+      image: Image.camCarot
+    },
+    {
+      name: 'Sinh tố dâu',
+      image: Image.dau
+    },
+    {
+      name: 'Sinh tố dứa',
+      image: Image.cam
+    }
+  ]
+
+  const RenderItemsMenu = () => {
+    return (
+      <Slider {...settings}>
+        {allItems.map((e, index) => {
+          return (
+            <div key={index} className='wrap-item'>
+              <Tilt>
+                <div className='item-menu'>
+                  <img src={e.image} alt={e.name}/>
+                  <div className='title'>{e.name}</div>
+                </div>
+              </Tilt>
+            </div>
+          )
+        })}
+      </Slider>
+    )
+  }
+
   return (
     <div className='other-item'>
-      <Slider {...settings}>
-        <div className='wrap-item'>
-          <div className='item-menu'>
-            <img src={Image.coffeeItem} alt='item menu'/>
-            <div className='title'>Hello</div>
-            <div className='title'>Hello</div>
-            <div className='title'>Hello</div>
-            <div className='title'>Hello</div>
+      <div className='other-item-background' style={{backgroundImage: `url(${Image.otherMenuBG})`}}>
+        <div className='wrap-content'>
+          <div className='container'>
+            <div className='other-menu'>Other Menu</div>
+            <RenderItemsMenu />
           </div>
         </div>
-        <div className='wrap-item'>
-          <div className='item-menu'>
-            <img src={Image.coffeeItem} alt='item menu'/>
-            <div className='title'>Hello</div>
-            <div className='title'>Hello</div>
-            <div className='title'>Hello</div>
-            <div className='title'>Hello</div>
-          </div>
-        </div>
-        <div className='wrap-item'>
-          <div className='item-menu'>
-            <img src={Image.coffeeItem} alt='item menu'/>
-            <div className='title'>Hello</div>
-            <div className='title'>Hello</div>
-            <div className='title'>Hello</div>
-            <div className='title'>Hello</div>
-          </div>
-        </div>
-        <div className='wrap-item'>
-          <div className='item-menu'>
-            <img src={Image.coffeeItem} alt='item menu'/>
-            <div className='title'>Hello</div>
-            <div className='title'>Hello</div>
-            <div className='title'>Hello</div>
-            <div className='title'>Hello</div>
-          </div>
-        </div>
-        <div>
-          <h3>3</h3>
-        </div>
-        <div>
-          <h3>4</h3>
-        </div>
-        <div>
-          <h3>5</h3>
-        </div>
-        <div>
-          <h3>6</h3>
-        </div>
-      </Slider>
+      </div>
     </div>
   )
 }
