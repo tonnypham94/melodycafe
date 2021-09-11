@@ -8,12 +8,16 @@ import OurBlog from './components/OurBlog'
 import 'animate.css'
 import './LandingPage.scss'
 
-function LandingPage() {
+function LandingPage({ hideLoader }) {
   const [loadingPage, setLoadingPage] = useState(true)
 
   useEffect(() => {
-    setLoadingPage(false)
-  }, [])
+    // Waiting for loading page at least 2s
+    setTimeout(() => {
+      hideLoader()
+      setLoadingPage(false)
+    }, 2000)
+  }, [hideLoader])
 
   return (
     <div className="landing-page">
