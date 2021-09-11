@@ -40,8 +40,8 @@ function OtherMenu() {
 
   const allItems = [
     {
-      name: 'Sinh tố cam',
-      image: Image.cam1
+      name: 'Sinh tố cam cà rốt',
+      image: Image.camCarot
     },
     {
       name: 'Sinh tố dâu',
@@ -52,8 +52,8 @@ function OtherMenu() {
       image: Image.dua
     },
     {
-      name: 'Sinh tố cam cà rốt',
-      image: Image.camCarot
+      name: 'Sinh tố cam',
+      image: Image.cam1
     },
     {
       name: 'Sinh tố dâu',

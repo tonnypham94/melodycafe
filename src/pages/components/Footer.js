@@ -30,9 +30,10 @@ function Footer() {
         </div>
       </div>
       <div className="content-footer">
-        <div className="contact-us">
+        {/* <div className="contact-us">
           <span className="fast-flicker">C</span>o<span className="flicker2">n</span>tac<span className="flicker">t</span><span className="text-space">us</span>
-        </div>
+        </div> */}
+        <div className="contact-us-title">Contact Us</div>
         <div className="social-network">
           <div className="social-network-item">
             <FontAwesomeIcon className='title' icon={faMapMarkerAlt}/>
