@@ -1,0 +1,39 @@
+.tilt {
+  transform-style: preserve-3d;
+  background: #fff;
+  border-radius: 8px;
+  transform: perspective(1000px);
+
+  .tilt-children {
+    transform: translateZ(60px)
+  }
+}
+  
+// .item-menu123 {
+//   transform-style: preserve-3d;
+//   transform: perspective(1000px); 
+
+//   .item-menu {
+//     transform: translateZ(20px)
+//   }
+// }
+
+// .tilt {
+//   height: 150px;
+//   background-color: red;
+//   width: 200px;
+//   // background-image: -webkit-linear-gradient(315deg, #ff00ba 0%, #fae713 100%);
+//   // background-image: linear-gradient(135deg, #ff00ba 0%, #fae713 100%);
+//   transform-style: preserve-3d;
+//   will-change: transform;
+//   transform: perspective(1000px) rotateX(0deg) rotateY(0deg) scale3d(1, 1, 1);
+// }
+
+// .item-menu {
+//   // position: absolute;
+//   // width: 50%;
+//   // height: 50%;
+//   // top: 50%;
+//   // left: 50%;
+//   transform: translateZ(30px) translateX(-50%) translateY(-50%);
+// }

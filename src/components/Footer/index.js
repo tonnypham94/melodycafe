@@ -25,9 +25,10 @@ function Footer() {
   return (
     <div className="footer">
       <div className="inner-footer">
-        <div className="shape">
+        {/* Add Animation */}
+        {/* <div className="shape">
           {addShape()}
-        </div>
+        </div> */}
       </div>
       <div className="content-footer">
         {/* <div className="contact-us">

@@ -4,7 +4,7 @@ import VanillaTilt from 'vanilla-tilt'
 import './Tilt.scss'
 
 function Tilt(props) {
-  const { options, className, ...rest } = props
+  const { options, className, children, ...rest } = props
   const tilt = useRef(null)
   const titlClassNames = classNames('tilt', className)
 
@@ -19,7 +19,14 @@ function Tilt(props) {
     initVanillaTilt()
   }, [initVanillaTilt])
 
-  return <div ref={tilt} {...rest} className={titlClassNames} />
+  // return <div ref={tilt} {...rest} className={titlClassNames} />
+  return (
+    <div ref={tilt} {...rest} className={titlClassNames}>
+      <div className='tilt-children'>
+        {children}
+      </div>
+    </div>
+  )
 }
 
 export default Tilt

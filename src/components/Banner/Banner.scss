@@ -7,14 +7,16 @@
     text-align: center;
     overflow: hidden;
     position: relative;
+    transition: background-size 1500 linear;
 
     .react-parallax-image{
+      transition: background-size 1500 linear;
       width: 100%;
-      background-attachment: fixed;
+      position: fixed;
+      // background-attachment: fixed;
       background-position: center;
       background-repeat: no-repeat;
       background-size: cover;
-      // position: fixed;
       z-index: -1;
       height: 100vh;
       height: calc(var(--vh, 1vh) * 100);
