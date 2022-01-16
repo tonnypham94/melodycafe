@@ -10,7 +10,15 @@ function Banner({ loadingPage }) {
     'active': isRandomTitle,
   })
 
+  const HighQualityClass = classNames('high-quality', {
+    'active': isRandomTitle,
+  })
+
   const RandomCoffee = classNames('text--random-coffee', {
+    'active': isRandomTitle,
+  })
+
+  const OrganicClass = classNames('organic', {
     'active': isRandomTitle,
   })
 
@@ -39,7 +47,7 @@ function Banner({ loadingPage }) {
               <li>d</li>
               <li>y</li>
             </ul>
-            <div className="high-quality">High Quality</div>
+            <div className={HighQualityClass}>High Quality</div>
             <ul className={RandomCoffee}>
               <li>C</li>
               <li>o</li>
@@ -48,7 +56,7 @@ function Banner({ loadingPage }) {
               <li>e</li>
               <li>e</li>
             </ul>
-            <div className="organic"><span>100</span>% Organic</div>
+            <div className={OrganicClass}><span>100</span>% Organic</div>
           </div>
         </div>
       </div>

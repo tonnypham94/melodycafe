@@ -11,7 +11,6 @@
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    // position: fixed;
   }
 
   .wrap-content {
@@ -40,8 +39,6 @@
   .item-menu {
     font-family: Geraldine, Arial, serif;
     border-radius: 8px;
-    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
-    background: $white;
     height: 450px;
   
     img {
@@ -50,24 +47,26 @@
       transform: translate3d(0, -50px, 55px);
       border: 2px solid $space;
       border-radius: 8px;
-      width: 87%;
+      width: 85%;
       height: 400px;
       object-fit: cover;
     }
   
     .title {
-      font-family: Italianno, AlexBrush, Arial, serif;
+      font-family: Italianno, Allison, Arial, serif;
       font-size: 2rem;
       height: 50px;
       display: flex;
       justify-content: center;
       align-items: center;
-      margin: 1rem;
       box-sizing: border-box;
       background-color: $space;
       color: $white;
       transform: translate3d(0, -40px, 30px);
       border-radius: 8px;
+      width: 88%;
+      margin: auto;
+      margin-top: 0.5rem;
     }
   }
 }
@@ -76,7 +75,7 @@
   .other-item {
     .wrap-content {
       background-color: rgba(93, 53, 45, 0.6);
-      padding: 3rem 1rem 4rem 1rem;
+      padding: 3rem 0.3rem 4rem 0.3rem;
     
       .slick-list {
         padding-top: 30px;
@@ -99,11 +98,14 @@
       height: 410px;
   
       img {
-        height: 370px;
+        height: 390px;
+        width: 94%;
+        box-sizing: border-box;
       }
   
       .title {
-        margin-top: 8px;
+        width: 94%;
+        margin: auto;
       }
     }
   }

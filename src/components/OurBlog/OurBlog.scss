@@ -36,6 +36,12 @@
       padding: 0.5rem 1rem 1rem 1rem;
       font-size: 1rem;
       letter-spacing: 1.2px;
+      display: flex;
+      justify-content: space-between;
+
+      a {
+        color: $teal;
+      }
     }
   }
 
@@ -52,6 +58,22 @@
 
     &:before {
       color: $light-red;
+    }
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .our-blog {
+    padding: 3rem 0.3rem 4rem 0.3rem;
+
+    .our-blog-title {
+      font-size: 3rem;
+      margin-top: 20px;
+    }
+
+    .blog {
+      margin: 15px;
+      width: calc(100% - 30px) !important;
     }
   }
 }

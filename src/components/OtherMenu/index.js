@@ -1,6 +1,7 @@
 import React from 'react'
 import Slider from "react-slick"
-import Tilt from '../../components/Titl'
+// import Tilt from '../Titl'
+import Tilt from '../Tilt'
 import Image from '../../assets/images'
 import './OtherMenu.scss'
 
@@ -40,8 +41,8 @@ function OtherMenu() {
 
   const allItems = [
     {
-      name: 'Sinh tố cam',
-      image: Image.cam1
+      name: 'Sinh tố cam cà rốt',
+      image: Image.camCarot
     },
     {
       name: 'Sinh tố dâu',
@@ -52,8 +53,8 @@ function OtherMenu() {
       image: Image.dua
     },
     {
-      name: 'Sinh tố cam cà rốt',
-      image: Image.camCarot
+      name: 'Sinh tố cam',
+      image: Image.cam1
     },
     {
       name: 'Sinh tố dâu',
@@ -87,6 +88,8 @@ function OtherMenu() {
   return (
     <div className='other-item'>
       <div className='other-item-background' style={{backgroundImage: `url(${Image.otherMenuBG})`}}>
+      {/* <div className='other-item-background'>
+        <img src={Image.otherMenuBG} alt='other menu background' /> */}
         <div className='wrap-content'>
           <div className='container'>
             <div className='other-menu'>Other Menu</div>

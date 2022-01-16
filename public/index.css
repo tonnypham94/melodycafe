@@ -1,0 +1,46 @@
+@keyframes bounceHeightLoadding {
+  0% {
+    height: 100%;
+  }
+  50% {
+    height: 90%;
+  }
+  100% {
+    height: 100%;
+  }
+}
+
+.loading-page {
+  background-color: #ffffff;
+  height: 100vh;
+  width: 100%;
+  position: fixed;
+  z-index: 1000;
+  overflow: hidden;
+  top: 0;
+}
+
+.loading-page .animation-image {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation-name: bounceHeightLoadding;
+  animation-duration: 2.25s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease;
+}
+
+.loading-page.disable {
+  height: 0;
+  transition: height 0.25s ease-in;
+}
+
+.loading-page .displayNone {
+  display: none;
+}
+
+.loading-page img {
+  width: 300px;
+  height: 300px;
+}

@@ -7,14 +7,16 @@
     text-align: center;
     overflow: hidden;
     position: relative;
+    transition: background-size 1500 linear;
 
     .react-parallax-image{
+      transition: background-size 1500 linear;
       width: 100%;
-      background-attachment: fixed;
+      position: fixed;
+      // background-attachment: fixed;
       background-position: center;
       background-repeat: no-repeat;
       background-size: cover;
-      // position: fixed;
       z-index: -1;
       height: 100vh;
       height: calc(var(--vh, 1vh) * 100);
@@ -41,19 +43,76 @@
     }
   }
 
+  @keyframes highQuality {
+    0% {
+      transform: translate(-110%, 0);
+    }
+    45%, 55% {
+      transform: translate(0, 0);
+    }
+    100% {
+      transform: translate(110%, 0);
+    }
+  }
+
   .high-quality {
+    position: relative;
+    visibility: hidden;
+    overflow: hidden;
     font-family: Countryside, Arial, serif;
     font-size: 3rem;
     color: $gold;
     border-bottom: 1px solid $gold;
     border-top: 1px solid $gold;
     letter-spacing: 0.5rem;
+
+    &.active {
+      transition-delay: 2.25s;
+      visibility: visible;
+    }
+
+    &.active:after {
+      visibility: visible;
+      content: '';
+      height: 100%;
+      width: 100%;
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      background: $gold;
+      animation-name: highQuality;
+      animation-duration: 0.5s;
+      animation-delay: 2s;
+      animation-fill-mode: both;
+    }
   }
 
   .organic {
     font-family: Allison, Arial, serif;
     font-size: 3rem;
     font-weight: 500;
+    opacity: 0;
+    transition-property: opacity;
+    transition-duration: 0.5s;
+    transition-timing-function: ease-in-out;
+    transition-delay: 2.5s;
+
+    &.active {
+      opacity: 1;
+    }
+  }
+
+  .text--perspective {
+    perspective: 1000px;
+  }
+  .text--perspective .char {
+    transition: transform 0.25s calc(0.25s + var(--char-index) * 0.1s), opacity 0.05s calc(0.25s + var(--char-index) * 0.1s);
+  }
+  .text--perspective [data-scroll='out'] .char {
+    opacity: 0;
+    transform: translate3d(-25px, -20px, -800px);
   }
   
   .text--random {
@@ -129,6 +188,34 @@
       transform: translate(0, 0);
     }
   }
+
+  // Animation for high quality
+  .text--blocks [data-scroll='out'] .char {
+    visibility: hidden;
+  }
+
+  .text--blocks [data-scroll='in'] {
+    overflow: hidden;
+    position: relative;
+  }
+
+  .text--blocks [data-scroll='in'] .char {
+    transition-delay: 0.5s;
+  }
+
+  .text--blocks [data-scroll='in']:after {
+    content: '';
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: #fff;
+    animation: block 0.5s 0.25s both;
+  }
+
 }
 
 @media only screen and (max-width: 767px) {
