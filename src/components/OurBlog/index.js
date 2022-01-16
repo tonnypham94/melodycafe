@@ -1,6 +1,7 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import Slider from "react-slick"
-import Image from '../../assets/images'
+import { allBlogItems } from '../../data'
 import './OurBlog.scss'
 
 function OurBlog() {
@@ -37,43 +38,16 @@ function OurBlog() {
     ]
   }
 
-  const allItems = [
-    {
-      title: '1 Everyday Dinner Choices for a Healthier, Happier You',
-      image: Image.blog1
-    },
-    {
-      title: '2 Everyday Dinner Choices for a Healthier, Happier You',
-      image: Image.blog2
-    },
-    {
-      title: '3 Everyday Dinner Choices for a Healthier, Happier You',
-      image: Image.blog3
-    },
-    {
-      title: '4 Everyday Dinner Choices for a Healthier, Happier You',
-      image: Image.blog4
-    },
-    {
-      title: '5 Everyday Dinner Choices for a Healthier, Happier You',
-      image: Image.blog5
-    },
-    {
-      title: '6 Everyday Dinner Choices for a Healthier, Happier You',
-      image: Image.blog3
-    }
-  ]
-
   const RenderItemsMenu = () => {
     return (
       <Slider {...settings}>
-        {allItems.map((e, index) => {
+        {allBlogItems.map((e, index) => {
           return (
             <div key={index} className='wrap-blog'>
               <div className='blog'>
                 <img src={e.image} alt={e.title}/>
                 <div className='title'>{e.title}</div>
-                <div className='date'>December 6, 2018</div>
+                <div className='date'>December 6, 2018 <Link to={`/blog/${e.id}`}>Xem thêm</Link></div>
               </div>
             </div>
           )

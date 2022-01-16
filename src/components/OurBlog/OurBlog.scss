@@ -36,6 +36,12 @@
       padding: 0.5rem 1rem 1rem 1rem;
       font-size: 1rem;
       letter-spacing: 1.2px;
+      display: flex;
+      justify-content: space-between;
+
+      a {
+        color: $teal;
+      }
     }
   }
 
