@@ -1,7 +1,6 @@
 import React from 'react'
 import Slider from "react-slick"
-// import Tilt from '../Titl'
-import Tilt from '../Tilt'
+// import Tilt from '../Tilt'
 import Image from '../../assets/images'
 import './OtherMenu.scss'
 
@@ -41,29 +40,41 @@ function OtherMenu() {
 
   const allItems = [
     {
-      name: 'Sinh tố cam cà rốt',
-      image: Image.camCarot
-    },
-    {
       name: 'Sinh tố dâu',
       image: Image.dau1
     },
     {
-      name: 'Sinh tố dứa',
+      name: 'Trà gừng',
+      image: Image.traGung
+    },
+    {
+      name: 'Nước ép cam cà rốt',
+      image: Image.camCarot
+    },
+    {
+      name: 'Nước ép dứa',
       image: Image.dua
     },
     {
-      name: 'Sinh tố cam',
+      name: 'Yogurt dâu',
+      image: Image.yogurtDau
+    },
+    {
+      name: 'Nước ép cam',
       image: Image.cam1
     },
     {
-      name: 'Sinh tố dâu',
-      image: Image.dau
+      name: 'Trà Lipton',
+      image: Image.traLipton
     },
     {
-      name: 'Sinh tố dứa',
-      image: Image.cam
-    }
+      name: 'Yogurt việt quất',
+      image: Image.yogurtVietQuat
+    },
+    {
+      name: 'Và còn rất nhiều thức uống khác',
+      image: Image.thucUongKhac
+    },
   ]
 
   const RenderItemsMenu = () => {

@@ -4,12 +4,16 @@ import otherMenuBG from './otherMenuBG.jpeg'
 import newcafe from './newcafe.mp4'
 
 // Products
-import camCarot from './products/cam-carot.jpeg'
-import cam from './products/cam.jpeg'
+import camCarot from './products/camCarot.jpeg'
 import cam1 from './products/cam1.jpeg'
-import dau from './products/dau.jpeg'
 import dau1 from './products/dau1.jpeg'
 import dua from './products/dua.jpeg'
+import thucUongKhac from './products/thucUongKhac.jpeg'
+import traGung from './products/traGung.jpeg'
+import traLipton from './products/traLipton.jpeg'
+import traTac from './products/traTac.jpeg'
+import yogurtDau from './products/yogurtDau.jpeg'
+import yogurtVietQuat from './products/yogurtVietQuat.jpeg'
 
 //Blogs
 // More image in blog 1:
@@ -61,11 +65,15 @@ const Images = {
   otherMenuBG: otherMenuBG,
   newcafe: newcafe,
   camCarot: camCarot,
-  cam: cam,
   cam1: cam1,
-  dau: dau,
   dau1: dau1,
   dua: dua,
+  thucUongKhac: thucUongKhac,
+  traGung: traGung,
+  traLipton: traLipton,
+  traTac: traTac,
+  yogurtDau: yogurtDau,
+  yogurtVietQuat: yogurtVietQuat,
   blog1: blog1,
   blog1Img1: blog1Img1,
   blog1Img2: blog1Img2,
