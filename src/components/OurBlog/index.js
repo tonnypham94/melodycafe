@@ -47,7 +47,7 @@ function OurBlog() {
               <div className='blog'>
                 <img src={e.image} alt={e.title}/>
                 <div className='title'>{e.title}</div>
-                <div className='date'>December 6, 2018 <Link to={`/blog/${e.id}`}>Xem thêm</Link></div>
+                <div className='date'>{e.date} <Link to={`/blog/${e.id}`}>Xem thêm</Link></div>
               </div>
             </div>
           )
