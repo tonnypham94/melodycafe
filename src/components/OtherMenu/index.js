@@ -72,12 +72,13 @@ function OtherMenu() {
         {allItems.map((e, index) => {
           return (
             <div key={index} className='wrap-item'>
-              <Tilt>
+              {/* TODO: Remove Till for the performance */}
+              {/* <Tilt> */}
                 <div className='item-menu'>
                   <img src={e.image} alt={e.name}/>
                   <div className='title'>{e.name}</div>
                 </div>
-              </Tilt>
+              {/* </Tilt> */}
             </div>
           )
         })}

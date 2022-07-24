@@ -19,7 +19,7 @@ function LandingPage() {
       <Banner loadingPage={loading}/>
       <div className="wrap-page-content">
         <MainItem />
-        {/* <OtherMenu /> */}
+        <OtherMenu />
         <OurGallery />
         <OurBlog />
         <Footer />
