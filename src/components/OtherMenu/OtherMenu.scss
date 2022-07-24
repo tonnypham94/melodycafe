@@ -55,7 +55,8 @@
     .title {
       font-family: Italianno, Allison, Arial, serif;
       font-size: 2rem;
-      height: 50px;
+      min-height: 50px;
+      text-align: center;
       display: flex;
       justify-content: center;
       align-items: center;

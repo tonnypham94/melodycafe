@@ -1,16 +1,28 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import useLoadingPage from '../../hooks/useLoadingPage'
-import { useParams } from 'react-router-dom'
+import { useHistory, useParams } from 'react-router-dom'
 import { allBlogItems } from '../../data'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faArrowAltCircleLeft } from '@fortawesome/free-regular-svg-icons'
 import './ProductDetail.scss'
 
 function ProductDetail() {
-  const { slugBlogId } = useParams()
-  const blogData = allBlogItems[slugBlogId - 1]
   useLoadingPage()
+  const { slugBlogId } = useParams()
+  const history = useHistory()
+  const blogData = allBlogItems[slugBlogId - 1]
+
+  const handleBackButton = () => {
+    history.goBack()
+  }
+
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  }, [])
 
   return (
     <div className="product-detail">
+      <FontAwesomeIcon className='back-arrow' icon={faArrowAltCircleLeft} size='3x' color='white' onClick={handleBackButton} />
       <div className="product-detail__page">
         <div className="product-detail__banner">
           <img src={blogData.image} alt='blog'/>
